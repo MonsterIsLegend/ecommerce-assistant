@@ -1,0 +1,50 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: jan
+      changes:
+        - createTable:
+            tableName: product
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: brand
+                  type: VARCHAR(255)
+              - column:
+                  name: model
+                  type: VARCHAR(255)
+              - column:
+                  name: cpu
+                  type: VARCHAR(255)
+              - column:
+                  name: gpu
+                  type: VARCHAR(255)
+              - column:
+                  name: ram
+                  type: INTEGER
+              - column:
+                  name: storage
+                  type: INTEGER
+              - column:
+                  name: screen_size
+                  type: VARCHAR(255)
+              - column:
+                  name: resolution
+                  type: VARCHAR(255)
+              - column:
+                  name: touchscreen
+                  type: BOOLEAN
+              - column:
+                  name: price
+                  type: NUMERIC(38,2)
+              - column:
+                  name: category
+                  type: VARCHAR(255)
+              - column:
+                  name: description
+                  type: VARCHAR(2000)
