@@ -2,7 +2,7 @@ package com.jansolski.ecommerceassistant.controller;
 
 import com.jansolski.ecommerceassistant.dto.CustomerDto;
 import com.jansolski.ecommerceassistant.dto.CustomerRegistrationDto;
-import com.jansolski.ecommerceassistant.enums.Role;
+import com.jansolski.ecommerceassistant.dto.PasswordResetDto;
 import com.jansolski.ecommerceassistant.service.AuthService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -35,5 +35,10 @@ public class AuthController {
         boolean success = authService.login(email, password);
         return success ? ResponseEntity.ok("Zalogowano pomyślnie") :
                 ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Błędne dane logowania");
+    }
+    @PostMapping("/reset")
+    public ResponseEntity<String> resetPassword(@Valid @RequestBody PasswordResetDto dto) {
+        authService.resetPassword(dto);
+        return ResponseEntity.ok("Password reset successful");
     }
 }

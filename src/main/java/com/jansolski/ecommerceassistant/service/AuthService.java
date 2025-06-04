@@ -2,10 +2,12 @@ package com.jansolski.ecommerceassistant.service;
 
 import com.jansolski.ecommerceassistant.dto.CustomerDto;
 import com.jansolski.ecommerceassistant.dto.CustomerRegistrationDto;
+import com.jansolski.ecommerceassistant.dto.PasswordResetDto;
 import com.jansolski.ecommerceassistant.entity.Customer;
 import com.jansolski.ecommerceassistant.enums.Role;
 import com.jansolski.ecommerceassistant.mapper.CustomerMapper;
 import com.jansolski.ecommerceassistant.repository.CustomerRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -52,5 +54,14 @@ public class AuthService {
                 .orElseThrow(() -> new NoSuchElementException("Nie znaleziono użytkownika"));
 
         return passwordEncoder.matches(password, customer.getPassword());
+    }
+
+    @Transactional
+    public void resetPassword(PasswordResetDto dto) {
+        Customer customer = customerRepository.findByEmail(dto.getEmail())
+                .orElseThrow(() -> new NoSuchElementException("User with email " + dto.getEmail() + " not found"));
+
+        customer.setPassword(passwordEncoder.encode(dto.getNewPassword()));
+        customerRepository.save(customer);
     }
 }
