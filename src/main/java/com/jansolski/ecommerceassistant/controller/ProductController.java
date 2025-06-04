@@ -1,7 +1,7 @@
 package com.jansolski.ecommerceassistant.controller;
 
 import com.jansolski.ecommerceassistant.dto.ProductDto;
-import com.jansolski.ecommerceassistant.entity.ProductCategory;
+import com.jansolski.ecommerceassistant.enums.ProductCategory;
 import com.jansolski.ecommerceassistant.service.ProductService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

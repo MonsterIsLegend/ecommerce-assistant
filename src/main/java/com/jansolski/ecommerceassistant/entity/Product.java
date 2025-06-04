@@ -1,5 +1,6 @@
 package com.jansolski.ecommerceassistant.entity;
 
+import com.jansolski.ecommerceassistant.enums.ProductCategory;
 import jakarta.persistence.*;
 import lombok.*;
 

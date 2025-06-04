@@ -1,4 +1,4 @@
-package com.jansolski.ecommerceassistant.entity;
+package com.jansolski.ecommerceassistant.enums;
 
 public enum ProductCategory {
     GAMING,

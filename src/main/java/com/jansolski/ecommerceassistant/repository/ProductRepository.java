@@ -1,7 +1,7 @@
 package com.jansolski.ecommerceassistant.repository;
 
 import com.jansolski.ecommerceassistant.entity.Product;
-import com.jansolski.ecommerceassistant.entity.ProductCategory;
+import com.jansolski.ecommerceassistant.enums.ProductCategory;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

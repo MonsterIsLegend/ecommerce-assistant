@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jansolski.ecommerceassistant.dto.ProductDto;
 import com.jansolski.ecommerceassistant.entity.Product;
-import com.jansolski.ecommerceassistant.entity.ProductCategory;
+import com.jansolski.ecommerceassistant.enums.ProductCategory;
 import com.jansolski.ecommerceassistant.mapper.ProductMapper;
 import com.jansolski.ecommerceassistant.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
