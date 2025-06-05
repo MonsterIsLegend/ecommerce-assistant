@@ -48,6 +48,13 @@ public class CustomerService {
         Customer customer = customerRepository.findById(customerId)
                 .orElseThrow(() -> new NoSuchElementException("Customer not found"));
 
+        boolean hasMain = customer.getAddresses().stream()
+                .anyMatch(Address::isMain);
+
+        if (dto.isMain() && hasMain) {
+            throw new IllegalStateException("Customer already has a primary address!");
+        }
+
         Address address = addressMapper.toEntity(dto);
         address.setCustomer(customer);
         customer.getAddresses().add(address);
@@ -55,6 +62,7 @@ public class CustomerService {
         Customer updated = customerRepository.save(customer);
         return customerMapper.toDto(updated);
     }
+
 
     public CustomerDto updateAddress(Long customerId, Long addressId, AddressDto dto) {
         Customer customer = customerRepository.findById(customerId)

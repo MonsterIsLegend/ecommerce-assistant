@@ -51,7 +51,7 @@ databaseChangeLog:
                   name: country
                   type: VARCHAR(100)
               - column:
-                  name: is_default
+                  name: main
                   type: BOOLEAN
               - column:
                   name: customer_id

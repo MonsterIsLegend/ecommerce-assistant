@@ -26,5 +26,5 @@ public class AddressDto {
     private String country;
 
     @Schema(description = "Czy adres domyślny", example = "true")
-    private boolean isDefault;
+    private boolean main;
 }
