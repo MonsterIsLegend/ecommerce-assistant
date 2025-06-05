@@ -78,9 +78,17 @@ public class CustomerService {
         address.setPostalCode(dto.getPostalCode());
         address.setCountry(dto.getCountry());
 
+        if (dto.isMain()) {
+            customer.getAddresses().forEach(a -> a.setMain(false));
+            address.setMain(true);
+        } else {
+            address.setMain(false);
+        }
+
         Customer updated = customerRepository.save(customer);
         return customerMapper.toDto(updated);
     }
+
     public CustomerDto deleteAddress(Long customerId, Long addressId) {
         Customer customer = customerRepository.findById(customerId)
                 .orElseThrow(() -> new NoSuchElementException("Customer not found"));
@@ -91,6 +99,5 @@ public class CustomerService {
         Customer updated = customerRepository.save(customer);
         return customerMapper.toDto(updated);
     }
-
 
 }
