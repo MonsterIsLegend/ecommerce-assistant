@@ -1,10 +1,13 @@
 package com.jansolski.ecommerceassistant.service;
 
 import com.jansolski.ecommerceassistant.dto.CustomerDto;
-import com.jansolski.ecommerceassistant.dto.CustomerRegistrationDto;
+import com.jansolski.ecommerceassistant.dto.CustomerAuthorizationDto;
+import com.jansolski.ecommerceassistant.dto.LoginResponseDto;
 import com.jansolski.ecommerceassistant.dto.PasswordResetDto;
 import com.jansolski.ecommerceassistant.entity.Customer;
 import com.jansolski.ecommerceassistant.enums.Role;
+import com.jansolski.ecommerceassistant.exception.InvalidCredentialsException;
+import com.jansolski.ecommerceassistant.exception.RestExceptionHandler;
 import com.jansolski.ecommerceassistant.mapper.CustomerMapper;
 import com.jansolski.ecommerceassistant.repository.CustomerRepository;
 import jakarta.transaction.Transactional;
@@ -22,7 +25,7 @@ public class AuthService {
     private final PasswordEncoder passwordEncoder;
     private final CustomerMapper customerMapper;
 
-    public CustomerDto registerCustomer(CustomerRegistrationDto dto) {
+    public CustomerDto registerCustomer(CustomerAuthorizationDto dto) {
         if (customerRepository.findByEmail(dto.getEmail()).isPresent()){
             throw new IllegalArgumentException("Email already exists");
         }
@@ -35,7 +38,7 @@ public class AuthService {
         return customerMapper.toDto(saved);
     }
 
-    public CustomerDto registerAdmin(CustomerRegistrationDto dto) {
+    public CustomerDto registerAdmin(CustomerAuthorizationDto dto) {
         if (customerRepository.findByEmail(dto.getEmail()).isPresent()){
             throw new IllegalArgumentException("Email already exists");
         }
@@ -49,11 +52,14 @@ public class AuthService {
         return customerMapper.toDto(saved);
     }
 
-    public boolean login(String email, String password) {
+    public LoginResponseDto login(String email, String password) {
       Customer customer = customerRepository.findByEmail(email)
-                .orElseThrow(() -> new NoSuchElementException("Nie znaleziono użytkownika"));
+                .orElseThrow(() -> new NoSuchElementException("User not found"));
 
-        return passwordEncoder.matches(password, customer.getPassword());
+        if(passwordEncoder.matches(password, customer.getPassword())){
+            return new LoginResponseDto(customer.getId(), customer.getEmail(), customer.getRole(), "Zalogowano pomyślnie");
+        }
+        else throw new InvalidCredentialsException("Bad credentials");
     }
 
     @Transactional

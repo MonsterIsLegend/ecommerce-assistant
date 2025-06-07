@@ -10,8 +10,8 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Schema(description = "DTO rejestracji nowego użytkownika")
-public class CustomerRegistrationDto {
+@Schema(description = "DTO służące do rejestracji nowego użytkownika i logowania")
+public class CustomerAuthorizationDto {
 
     @Email(message = "Niepoprawny adres email")
     @NotBlank(message = "Email jest wymagany")

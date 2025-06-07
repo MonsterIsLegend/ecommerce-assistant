@@ -1,6 +1,7 @@
 package com.jansolski.ecommerceassistant.controller;
 
 import com.jansolski.ecommerceassistant.dto.ProductDto;
+import com.jansolski.ecommerceassistant.dto.ProductFilterDto;
 import com.jansolski.ecommerceassistant.enums.ProductCategory;
 import com.jansolski.ecommerceassistant.service.ProductService;
 import jakarta.validation.Valid;
@@ -64,6 +65,11 @@ public class ProductController {
     @GetMapping("/sort/price/desc")
     public ResponseEntity<List<ProductDto>> sortByPriceDesc() {
         return ResponseEntity.ok(productService.getAllSortedByPriceDesc());
+    }
+
+    @PostMapping("/filter")
+    public List<ProductDto> filterProducts(@RequestBody ProductFilterDto req) {
+        return productService.filterSearchSort(req);
     }
 
     @PostMapping("/addData")
