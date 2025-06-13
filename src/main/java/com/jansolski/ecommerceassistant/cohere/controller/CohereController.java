@@ -10,6 +10,7 @@ import reactor.core.publisher.Mono;
 @RestController
 @RequestMapping("/api/assistant")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "http://localhost:5173")
 public class CohereController {
 
     private final CohereService cohereService;
