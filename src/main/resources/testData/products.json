@@ -9,9 +9,9 @@
     "screenSize": "14.0\"",
     "resolution": "2560x1600",
     "touchscreen": false,
-    "price": 7999.99,
+    "price": 1779.99,
     "category": "GAMING",
-    "description": "Ultramobilny laptop gamingowy z ekranem 165Hz i wysoką wydajnością"
+    "description": "Ultra-mobile gaming laptop with a 165Hz display and high performance"
   },
   {
     "brand": "Lenovo",
@@ -23,9 +23,9 @@
     "screenSize": "14.0\"",
     "resolution": "1920x1200",
     "touchscreen": true,
-    "price": 8999.00,
+    "price": 2000,
     "category": "BUSINESS",
-    "description": "Lekki ultrabook klasy premium z matowym ekranem dotykowym"
+    "description": "Lightweight premium ultrabook with a matte touchscreen"
   },
   {
     "brand": "Apple",
@@ -37,9 +37,9 @@
     "screenSize": "13.6\"",
     "resolution": "2560x1664",
     "touchscreen": false,
-    "price": 6499.00,
+    "price": 1449.99,
     "category": "LIFESTYLE",
-    "description": "Nowoczesny MacBook Air z cichym chłodzeniem i świetnym ekranem Retina"
+    "description": "Modern MacBook Air with silent cooling and an excellent Retina display"
   },
   {
     "brand": "HP",
@@ -51,9 +51,9 @@
     "screenSize": "15.6\"",
     "resolution": "1920x1080",
     "touchscreen": false,
-    "price": 3299.00,
+    "price": 729.99,
     "category": "STUDENT",
-    "description": "Solidny laptop do codziennej pracy i nauki z wygodną klawiaturą"
+    "description": "Reliable laptop for daily work and study with a comfortable keyboard"
   },
   {
     "brand": "Dell",
@@ -65,9 +65,9 @@
     "screenSize": "15.6\"",
     "resolution": "3840x2400",
     "touchscreen": true,
-    "price": 12499.99,
+    "price": 2779.99,
     "category": "ULTRABOOK",
-    "description": "Flagowy model Dell XPS z ekranem OLED 4K i grafiką RTX"
+    "description": "Dell's flagship XPS model with a 4K OLED screen and RTX graphics"
   },
   {
     "brand": "MSI",
@@ -79,9 +79,9 @@
     "screenSize": "15.6\"",
     "resolution": "1920x1080",
     "touchscreen": false,
-    "price": 5899.99,
+    "price": 1309.99,
     "category": "GAMING",
-    "description": "Laptop gamingowy z grafiką RTX 4050 i podświetlaną klawiaturą"
+    "description": "Gaming laptop with RTX 4050 graphics and a backlit keyboard"
   },
   {
     "brand": "Acer",
@@ -93,9 +93,9 @@
     "screenSize": "15.6\"",
     "resolution": "1920x1080",
     "touchscreen": false,
-    "price": 2599.00,
+    "price": 579.99,
     "category": "STUDENT",
-    "description": "Niedrogi laptop do nauki z AMD Ryzen 5 i matowym ekranem"
+    "description": "Affordable learning laptop with AMD Ryzen 5 and matte display"
   },
   {
     "brand": "Microsoft",
@@ -107,9 +107,9 @@
     "screenSize": "13.5\"",
     "resolution": "2256x1504",
     "touchscreen": true,
-    "price": 5499.00,
+    "price": 1219.99,
     "category": "LIFESTYLE",
-    "description": "Stylowy i lekki laptop z dotykowym ekranem PixelSense"
+    "description": "Stylish and lightweight laptop with a PixelSense touchscreen"
   },
   {
     "brand": "Apple",
@@ -121,9 +121,9 @@
     "screenSize": "14.2\"",
     "resolution": "3024x1964",
     "touchscreen": false,
-    "price": 10999.00,
+    "price": 2449.99,
     "category": "BUSINESS",
-    "description": "Mocarny MacBook Pro z układem M3 i długim czasem pracy na baterii"
+    "description": "Powerful MacBook Pro with the M3 chip and long battery life"
   },
   {
     "brand": "Lenovo",
@@ -135,9 +135,9 @@
     "screenSize": "16.0\"",
     "resolution": "2560x1600",
     "touchscreen": false,
-    "price": 9699.00,
+    "price": 2155,
     "category": "GAMING",
-    "description": "Potężny laptop gamingowy z ekranem 165Hz i układem chłodzenia ColdFront"
+    "description": "High-performance gaming laptop with a 165Hz screen and ColdFront cooling"
   },
   {
     "brand": "ASUS",
@@ -149,9 +149,9 @@
     "screenSize": "14.0\"",
     "resolution": "2880x1800",
     "touchscreen": true,
-    "price": 4899.99,
+    "price": 1089,
     "category": "ULTRABOOK",
-    "description": "Ultrabook z ekranem OLED, 100% DCI-P3 i bardzo długą baterią"
+    "description": "Ultrabook with OLED screen, 100% DCI-P3 color and long battery life"
   },
   {
     "brand": "Gigabyte",
@@ -163,9 +163,9 @@
     "screenSize": "16.0\"",
     "resolution": "3840x2400",
     "touchscreen": false,
-    "price": 14499.00,
+    "price": 3220,
     "category": "ULTRABOOK",
-    "description": "Laptop klasy premium z ekranem OLED 4K i mocną specyfikacją do tworzenia treści"
+    "description": "Premium-class laptop with 4K OLED display and strong specs for content creation"
   },
   {
     "brand": "Dell",
@@ -177,9 +177,9 @@
     "screenSize": "14.0\"",
     "resolution": "1920x1200",
     "touchscreen": true,
-    "price": 3699.00,
+    "price": 820,
     "category": "STUDENT",
-    "description": "Niezawodny laptop codzienny z nowoczesnym ekranem 16:10"
+    "description": "Reliable everyday laptop with modern 16:10 display"
   },
   {
     "brand": "HP",
@@ -191,9 +191,9 @@
     "screenSize": "17.3\"",
     "resolution": "2560x1440",
     "touchscreen": false,
-    "price": 14999.00,
+    "price": 3339.99,
     "category": "GAMING",
-    "description": "Laptop dla graczy z ekstremalną wydajnością i ekranem 240Hz"
+    "description": "Gaming laptop with extreme performance and a 240Hz screen"
   },
   {
     "brand": "Acer",
@@ -205,9 +205,9 @@
     "screenSize": "14.0\"",
     "resolution": "1920x1080",
     "touchscreen": false,
-    "price": 2999.00,
+    "price": 669.99,
     "category": "LIFESTYLE",
-    "description": "Lekki i elegancki laptop do codziennego użytku"
+    "description": "Light and elegant laptop for everyday use"
   },
   {
     "brand": "ASUS",
@@ -219,8 +219,8 @@
     "screenSize": "15.6\"",
     "resolution": "1920x1080",
     "touchscreen": false,
-    "price": 4399.00,
+    "price": 999.99,
     "category": "GAMING",
-    "description": "Wytrzymały laptop z ekranem 144Hz i militarną normą MIL-STD-810H"
+    "description": "Durable laptop with 144Hz screen and MIL-STD-810H certification"
   }
 ]

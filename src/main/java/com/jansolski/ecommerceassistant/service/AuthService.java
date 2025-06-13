@@ -57,7 +57,7 @@ public class AuthService {
                 .orElseThrow(() -> new NoSuchElementException("User not found"));
 
         if(passwordEncoder.matches(password, customer.getPassword())){
-            return new LoginResponseDto(customer.getId(), customer.getEmail(), customer.getRole(), "Zalogowano pomyślnie");
+            return new LoginResponseDto(customer.getId(), customer.getEmail(), customer.getRole(), "Successfully logged in");
         }
         else throw new InvalidCredentialsException("Bad credentials");
     }

@@ -26,7 +26,7 @@ public class OrderService {
 
     public OrderDto getById(Long id) {
         Order order = orderRepository.findById(id)
-                .orElseThrow(() -> new NoSuchElementException("Order z takim Id nie istenieje: " + id));
+                .orElseThrow(() -> new NoSuchElementException("Order with that id doesnt exists: " + id));
         return orderMapper.toDto(order);
     }
 

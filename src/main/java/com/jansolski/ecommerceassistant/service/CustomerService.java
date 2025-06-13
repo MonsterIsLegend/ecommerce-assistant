@@ -30,7 +30,7 @@ public class CustomerService {
 
     public CustomerDto getById(Long id) {
         Customer customer = customerRepository.findById(id)
-                .orElseThrow(() -> new NoSuchElementException("Customer z takim Id nie znaleziony: " + id));
+                .orElseThrow(() -> new NoSuchElementException("Customer with that Id not found: " + id));
         return customerMapper.toDto(customer);
     }
 

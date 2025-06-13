@@ -75,6 +75,6 @@ public class ProductController {
     @PostMapping("/addData")
     public ResponseEntity<String> addData() {
         productService.addTestDataFromJson();
-        return ResponseEntity.ok("Dane testowe zostały załadowane.");
+        return ResponseEntity.ok("Test data has been added");
     }
 }

@@ -18,7 +18,7 @@ public class RestExceptionHandler {
     @ExceptionHandler(NoSuchElementException.class)
     public ResponseEntity<String> handleNotFound(NoSuchElementException ex) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                .body("Nie znaleziono zasobu: " + ex.getMessage());
+                .body("Resource not found: " + ex.getMessage());
     }
 
     @ExceptionHandler(MethodArgumentTypeMismatchException.class)
@@ -33,8 +33,8 @@ public class RestExceptionHandler {
                     .toArray(String[]::new);
 
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(
-                    "Niepoprawna wartość parametru '" + param + "': " + value +
-                            ". Dozwolone wartości: " + String.join(", ", allowed)
+                    "Invalid vaslue for the parameter '" + param + "': " + value +
+                            ". Allowed values are: " + String.join(", ", allowed)
             );
         }
 
@@ -45,7 +45,7 @@ public class RestExceptionHandler {
     @ExceptionHandler(Exception.class)
     public ResponseEntity<String> handleOther(Exception ex) {
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                .body("Błąd wewnętrzny: " + ex.getMessage());
+                .body("Internal error: " + ex.getMessage());
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)

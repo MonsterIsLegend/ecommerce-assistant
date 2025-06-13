@@ -40,7 +40,7 @@ public class CohereService {
                     if (response.getMessage() != null && response.getMessage().getContent() != null && response.getMessage().getContent().length > 0) {
                         return response.getMessage().getContent()[0].getText();
                     }
-                    return "Brak odpowiedzi od Cohere";
+                    return "No answer from Cohere";
                 });
     }
 

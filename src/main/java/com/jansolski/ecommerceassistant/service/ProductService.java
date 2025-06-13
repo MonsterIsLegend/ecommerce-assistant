@@ -164,7 +164,7 @@ public class ProductService {
 
             products.forEach(this::create);
         } catch (IOException e) {
-            throw new RuntimeException("Błąd podczas ładowania danych testowych: " + e.getMessage(), e);
+            throw new RuntimeException("Error durning test data loading: " + e.getMessage(), e);
         }
     }
 

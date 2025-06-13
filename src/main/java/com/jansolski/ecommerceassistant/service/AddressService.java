@@ -19,7 +19,7 @@ public class AddressService {
 
     public AddressDto getById(Long id) {
         Address address = addressRepository.findById(id)
-                .orElseThrow(() -> new NoSuchElementException("Address z takim Id nie istnieje:" + id));
+                .orElseThrow(() -> new NoSuchElementException("Address with that Id doesn't exist: " + id));
         return addressMapper.toDto(address);
     }
 
