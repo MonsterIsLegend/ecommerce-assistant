@@ -14,7 +14,7 @@ public class CohereChatResponse {
 
     @Data
     public static class Content {
-        private String type; // np. "text"
+        private String type;
         private String text;
     }
 }

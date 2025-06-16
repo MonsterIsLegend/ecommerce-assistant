@@ -16,7 +16,6 @@ public class AddressService {
     private final AddressRepository addressRepository;
     private final AddressMapper addressMapper;
 
-
     public AddressDto getById(Long id) {
         Address address = addressRepository.findById(id)
                 .orElseThrow(() -> new NoSuchElementException("Address with that Id doesn't exist: " + id));

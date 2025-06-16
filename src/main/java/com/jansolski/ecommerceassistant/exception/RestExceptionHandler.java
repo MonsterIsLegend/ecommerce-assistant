@@ -39,7 +39,7 @@ public class RestExceptionHandler {
         }
 
         return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                .body("Niepoprawna wartość parametru '" + param + "': " + value);
+                .body("Incorrect Parameter value: '" + param + "': " + value);
     }
 
     @ExceptionHandler(Exception.class)
